@@ -7,6 +7,9 @@ pipeline{
         maven 'maven3'
     }
     stages{
+        stage('sonaqube'){
+            steps{
+                
         stage('mavin build'){
             steps{
                 sh 'mvn clean install package'
@@ -35,7 +38,7 @@ pipeline{
         }
         stage('list the dir'){
             steps{
-                sh ' pwd'
+                sh 'ls'
             }
 
         }
